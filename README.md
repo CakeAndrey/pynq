@@ -1,2 +1,6 @@
 # pynq
-(python, linq): pynq
+
+```python
+(() => linq) + lambda: python = pynq
+
+```
