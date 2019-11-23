@@ -2,11 +2,13 @@ import pytest
 
 from core.pynq import Pynq
 
+import core.extensions
+
 
 def test_one_returns_item_if_col_has_one_item():
     list = ['Only you.']
 
-    actual = Pynq(list).one()
+    actual = list.one()
     expected = 'Only you.'
 
     assert actual == expected
