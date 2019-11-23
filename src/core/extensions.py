@@ -15,7 +15,7 @@ def where(self, pred):
 @extends(list)
 def one(self):
     if len(self) != 1:
-        raise Exception('Sequence length is not one.')
+        raise Exception('List length is not one.')
 
     return self[0]
 
@@ -25,7 +25,7 @@ def first(self, pred):
     for item in self:
         if pred(item):
             return item
-    raise Exception('Sequence contains no matching element.')
+    raise Exception('List contains no matching element.')
 
 
 @extends(list)
