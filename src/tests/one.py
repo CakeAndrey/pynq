@@ -1,6 +1,6 @@
 import pytest
 
-from pynq_list import Pynq
+from pynq import Pynq
 
 
 def test_one_returns_item_if_col_has_one_item():
