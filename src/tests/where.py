@@ -1,4 +1,4 @@
-from pynq import Pynq
+from core.pynq import Pynq
 
 
 def test_where_returns_integers_less_then_50():
