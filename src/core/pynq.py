@@ -13,9 +13,15 @@ class Pynq:
 
     def one(self):
         if len(self._list) != 1:
-            raise Exception('Collection length is not one.')
+            raise Exception('Sequence length is not one.')
 
         return self._list[0]
+
+    def first(self, pred):
+        for item in self._list:
+            if pred(item):
+                return item
+        raise Exception('Sequence contains no matching element.')
 
     def __str__(self):
         return str(self._list)
