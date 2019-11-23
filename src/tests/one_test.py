@@ -1,7 +1,5 @@
 import pytest
 
-from core.pynq import Pynq
-
 import core.extensions
 
 

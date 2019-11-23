@@ -1,6 +1,6 @@
 import pytest
 
-from core.pynq import Pynq
+import core.extensions
 
 
 def test_first_returns_value_when_seq_has_matching_value():
@@ -14,7 +14,7 @@ def test_first_returns_value_when_seq_has_matching_value():
         'Mordor'
     ]
 
-    actual = Pynq(list).first(lambda x: x == 'Mordor')
+    actual = list.first(lambda x: x == 'Mordor')
     expected = 'Mordor'
 
     assert actual == expected
@@ -32,7 +32,7 @@ def test_first_raises_exception_if_seq_has_not_matching_value():
     ]
 
     with pytest.raises(Exception):
-        Pynq(list).first(lambda x: x == 'Shire')
+        list.first(lambda x: x == 'Shire')
 
 
 def test_first_returns_value_if_seq_has_diff_types():
@@ -43,7 +43,7 @@ def test_first_returns_value_if_seq_has_diff_types():
         123
     ]
 
-    actual = Pynq(list).first(lambda x: x == 123)
+    actual = list.first(lambda x: x == 123)
     expected = 123
 
     assert actual == expected

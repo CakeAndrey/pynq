@@ -1,20 +1,19 @@
-from core.pynq import Pynq
-
+import core.extensions
 
 def test_where_returns_integers_less_then_50():
-    asd = []
+    list = []
 
     for i in range(100):
-        asd.append(i)
+        list.append(i)
 
-    actual = Pynq(asd).where(lambda x: x < 50)
+    actual = list.where(lambda x: x < 50)
 
     for item in actual:
         assert item < 50
 
 
 def test_where_returns_words():
-    asd = ['My name is... What?',
+    list = ['My name is... What?',
            'Knife',
            'No rest for the wicked',
            'Chair',
@@ -22,8 +21,7 @@ def test_where_returns_words():
            'Kedavra'
            ]
 
-    actual = Pynq(asd).where(lambda x: ' ' not in x)
-
+    actual = list.where(lambda x: ' ' not in x)
     expected = [
         'Knife',
         'Chair',
@@ -43,10 +41,9 @@ def test_where_returns_strings_started_with_capital_letter():
         lambda x: x + 1
     ]
 
-    actual = Pynq(list)\
+    actual = list\
         .where(lambda x: type(x) is str)\
         .where(lambda x: x[0].isupper())
-
     expected = [
         'String'
     ]

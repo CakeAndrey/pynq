@@ -1,5 +1,4 @@
-from core.pynq import Pynq
-
+import core.extensions
 
 def test_all_returns_true_if_all_items_matching_predicate():
     list = [
@@ -12,7 +11,7 @@ def test_all_returns_true_if_all_items_matching_predicate():
         'Mordor'
     ]
 
-    actual = Pynq(list).all(lambda x: x[0].isupper())
+    actual = list.all(lambda x: x[0].isupper())
     expected = True
 
     assert actual == expected
@@ -30,7 +29,7 @@ def test_all_returns_false_if_one_item_does_not_matching_predicate():
         'city'
     ]
 
-    actual = Pynq(list).all(lambda x: x[0].isupper())
+    actual = list.all(lambda x: x[0].isupper())
     expected = False
 
     assert actual == expected
