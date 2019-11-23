@@ -21,4 +21,4 @@ def test_one_raises_exception_if_col_has_not_one_item():
     ]
 
     with pytest.raises(Exception):
-        Pynq(list).one()
+        list.one()
