@@ -23,6 +23,12 @@ class Pynq:
                 return item
         raise Exception('Sequence contains no matching element.')
 
+    def all(self, pred):
+        for item in self._list:
+            if not pred(item):
+                return False
+        return True
+
     def __str__(self):
         return str(self._list)
 
