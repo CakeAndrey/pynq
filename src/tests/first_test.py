@@ -3,7 +3,7 @@ import pytest
 import core.extensions
 
 
-def test_first_returns_value_when_seq_has_matching_value():
+def test_first_returns_value_when_list_has_matching_value():
     list = [
         'Erebor',
         'Rivendell',
@@ -20,7 +20,7 @@ def test_first_returns_value_when_seq_has_matching_value():
     assert actual == expected
 
 
-def test_first_raises_exception_if_seq_has_not_matching_value():
+def test_first_raises_exception_if_list_has_not_matching_value():
     list = [
         'Erebor',
         'Rivendell',
@@ -35,7 +35,7 @@ def test_first_raises_exception_if_seq_has_not_matching_value():
         list.first(lambda x: x == 'Shire')
 
 
-def test_first_returns_value_if_seq_has_diff_types():
+def test_first_returns_value_if_list_has_diff_types():
     list = [
         'string',
         True,

@@ -3,7 +3,7 @@ import pytest
 import core.extensions
 
 
-def test_one_returns_item_if_col_has_one_item():
+def test_one_returns_item_if_list_has_one_item():
     list = ['Only you.']
 
     actual = list.one()
@@ -12,7 +12,7 @@ def test_one_returns_item_if_col_has_one_item():
     assert actual == expected
 
 
-def test_one_raises_exception_if_col_has_not_one_item():
+def test_one_raises_exception_if_list_has_not_one_item():
     list = [
         'We',
         'are',
