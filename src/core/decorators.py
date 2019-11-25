@@ -1,4 +1,4 @@
-from core.pytensions.patch import patch
+from src.core.pytensions.patch import patch
 
 
 def extends(type):

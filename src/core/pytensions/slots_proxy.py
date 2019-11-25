@@ -1,6 +1,6 @@
 import ctypes
 
-from core.pytensions.pyobject import PyObject
+from src.core.pytensions.pyobject import PyObject
 
 
 class SlotsProxy(PyObject):

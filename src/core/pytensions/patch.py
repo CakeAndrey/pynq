@@ -1,6 +1,6 @@
 import ctypes
 
-from core.pytensions.slots_proxy import SlotsProxy
+from src.core.pytensions.slots_proxy import SlotsProxy
 
 
 def patch(type):

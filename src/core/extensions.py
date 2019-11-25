@@ -1,4 +1,4 @@
-from core.decorators import extends
+from src.core.decorators import extends
 
 
 @extends(list)
