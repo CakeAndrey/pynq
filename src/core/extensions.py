@@ -34,3 +34,11 @@ def all(self, pred):
         if not pred(item):
             return False
     return True
+
+
+@extends(list)
+def pynq_append(self, item):
+    result = self.copy()
+    result.append(item)
+    return result
+
