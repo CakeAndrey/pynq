@@ -1,6 +1,6 @@
 import pytest
 
-import core.extensions
+from src.core import extensions
 
 
 def test_first_returns_value_when_list_has_matching_value():

@@ -1,4 +1,5 @@
-import core.extensions
+from src.core import extensions
+
 
 def test_all_returns_true_if_all_items_matching_predicate():
     list = [

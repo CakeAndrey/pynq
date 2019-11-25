@@ -1,4 +1,5 @@
-import core.extensions
+from src.core import extensions
+
 
 def test_where_returns_integers_less_then_50():
     list = []
@@ -19,7 +20,7 @@ def test_where_returns_words():
            'Chair',
            'Avada',
            'Kedavra'
-           ]
+]
 
     actual = list.where(lambda x: ' ' not in x)
     expected = [

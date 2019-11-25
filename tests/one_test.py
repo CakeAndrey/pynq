@@ -1,6 +1,6 @@
 import pytest
 
-import core.extensions
+from src.core import extensions
 
 
 def test_one_returns_item_if_list_has_one_item():
