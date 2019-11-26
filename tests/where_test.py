@@ -1,4 +1,4 @@
-from src.core import extensions
+from src.core import list_extensions
 
 
 def test_where_returns_integers_less_then_50():

@@ -1,4 +1,4 @@
-from src.core import extensions
+from src.core import list_extensions
 
 
 def test_pynq_append_created_new_list():

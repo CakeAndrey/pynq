@@ -50,3 +50,4 @@ def select(self, selector):
     for item in self:
         result.append(selector(item))
     return result
+

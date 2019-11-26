@@ -1,4 +1,4 @@
-import src.core.extensions
+import src.core.list_extensions
 
 
 def test_select_returns_values_as_strings():
