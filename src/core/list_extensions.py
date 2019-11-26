@@ -2,14 +2,6 @@ from src.core.decorators import extends
 
 
 @extends(list)
-def all(self, pred):
-    for item in self:
-        if not pred(item):
-            return False
-    return True
-
-
-@extends(list)
 def any(self, pred=None):
     if pred is None:
         return len(self) > 0
@@ -18,6 +10,23 @@ def any(self, pred=None):
         if pred(item):
             return True
     return False
+
+
+@extends(list)
+def all(self, pred):
+    for item in self:
+        if not pred(item):
+            return False
+    return True
+
+
+@extends(list)
+def aggregate(self, func):
+    result = self[0]
+
+    for item in self[1:]:
+        result = func(result, item)
+    return result
 
 
 @extends(list)
@@ -59,5 +68,4 @@ def where(self, pred):
     for item in self:
         if pred(item):
             result.append(item)
-
     return result
