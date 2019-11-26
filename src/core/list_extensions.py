@@ -10,6 +10,17 @@ def all(self, pred):
 
 
 @extends(list)
+def any(self, pred=None):
+    if pred is None:
+        return len(self) > 0
+
+    for item in self:
+        if pred(item):
+            return True
+    return False
+
+
+@extends(list)
 def first(self, pred):
     for item in self:
         if pred(item):
