@@ -32,7 +32,6 @@ def test_select_not_changing_old_list():
     ]
 
     list = default.copy()
-
     list.select(lambda x: str(x))
 
     assert list == default
