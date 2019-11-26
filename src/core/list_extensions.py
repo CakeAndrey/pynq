@@ -69,3 +69,24 @@ def where(self, pred):
         if pred(item):
             result.append(item)
     return result
+
+
+@extends(list)
+def sum(self, converter):
+    result = 0
+
+    for item in self:
+        result += converter(item)
+    return result
+
+
+@extends(list)
+def average(self, converter):
+    return sum(self, converter) / len(self)
+
+
+@extends(list)
+def concat(self, other):
+    result = self.copy()
+    result.extend(other)
+    return result
