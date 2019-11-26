@@ -72,7 +72,7 @@ def where(self, pred):
 
 
 @extends(list)
-def sum(self, converter):
+def sum(self, converter = lambda x: x):
     result = 0
 
     for item in self:
