@@ -42,3 +42,11 @@ def pynq_append(self, item):
     result.append(item)
     return result
 
+
+@extends(list)
+def select(self, selector):
+    result = list()
+
+    for item in self:
+        result.append(selector(item))
+    return result
