@@ -72,7 +72,7 @@ def where(self, pred):
 
 
 @extends(list)
-def sum(self, converter = lambda x: x):
+def sum(self, converter=lambda x: x):
     result = 0
 
     for item in self:
@@ -90,3 +90,19 @@ def concat(self, other):
     result = self.copy()
     result.extend(other)
     return result
+
+
+@extends(list)
+def distinct(self):
+    return list(set(self))
+
+
+@extends(list)
+def last(self, predicate=lambda x: x):
+    for item in self[::-1]:
+        if predicate(item):
+            return item
+    raise Exception('List contains no matching element.')
+
+
+
