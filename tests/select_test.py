@@ -1,4 +1,4 @@
-from core.list import List
+from pynq.core.list import List
 
 
 def test_select_returns_values_as_strings():

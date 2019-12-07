@@ -1,7 +1,6 @@
 import pytest
 
-from core.list import List
-from pynq.core import list
+from pynq.core.list import List
 
 
 def test_one_returns_item_if_list_has_one_item():
