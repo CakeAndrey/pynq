@@ -1,14 +1,14 @@
-import src.core.list_extensions
+from core.list import List
 
 
 def test_select_returns_values_as_strings():
-    list = [
+    list = List([
         123,
         True,
         None,
         'Aaa',
         {}
-    ]
+    ])
 
     actual = list.select(lambda x: str(x))
     expected = [
@@ -31,7 +31,7 @@ def test_select_not_changing_old_list():
         {}
     ]
 
-    list = default.copy()
+    list = List(default.copy())
     list.select(lambda x: str(x))
 
     assert list == default

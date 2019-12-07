@@ -1,8 +1,8 @@
-from src.core import list_extensions
+from pynq.core.list import List
 
 
 def test_all_returns_true_if_all_items_matching_predicate():
-    list = [
+    actual = List([
         'Erebor',
         'Rivendell',
         'Gondor',
@@ -10,16 +10,13 @@ def test_all_returns_true_if_all_items_matching_predicate():
         'Minas Ithil',
         'Minas Tirith',
         'Mordor'
-    ]
+    ]).all(lambda x: x[0].isupper())
 
-    actual = list.all(lambda x: x[0].isupper())
-    expected = True
-
-    assert actual == expected
+    assert actual is True
 
 
 def test_all_returns_false_if_one_item_does_not_matching_predicate():
-    list = [
+    actual = List([
         'Erebor',
         'Rivendell',
         'Gondor',
@@ -28,9 +25,7 @@ def test_all_returns_false_if_one_item_does_not_matching_predicate():
         'Minas Tirith',
         'Mordor',
         'city'
-    ]
+    ]).all(lambda x: x[0].isupper())
 
-    actual = list.all(lambda x: x[0].isupper())
-    expected = False
 
-    assert actual == expected
+    assert actual is False

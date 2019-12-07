@@ -1,10 +1,11 @@
 import pytest
 
-from src.core import list_extensions
+from core.list import List
+from pynq.core import list
 
 
 def test_one_returns_item_if_list_has_one_item():
-    list = ['Only you.']
+    list = List(['Only you.'])
 
     actual = list.one()
     expected = 'Only you.'
@@ -13,12 +14,12 @@ def test_one_returns_item_if_list_has_one_item():
 
 
 def test_one_raises_exception_if_list_has_not_one_item():
-    list = [
+    list = List([
         'We',
         'are',
         'the',
         'champions'
-    ]
+    ])
 
     with pytest.raises(Exception):
         list.one()
