@@ -1,4 +1,4 @@
-from sympy.utilities import pytest
+import pytest
 
 from pynq.core.list import List
 
