@@ -6,7 +6,7 @@
 ```
 
 ### Comming soon:
-* add_range
+* add_range +
 * average
 * concat
 * contains
