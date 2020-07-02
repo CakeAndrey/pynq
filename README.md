@@ -1,6 +1,6 @@
 # pynq
 
 ```python
-(() => linq) + lambda: python = pynq
+['linq'].select(lambbda x: 'pynq')
 
 ```
